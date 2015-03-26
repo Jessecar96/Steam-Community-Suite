@@ -119,7 +119,7 @@ if(valve_test_site || bad_domains.indexOf(frag) != -1 || window.location.href.ma
 	inject_script(open_url_copy.toString(), false);
 	inject_script(parse_url.toString(), false);
 
-	$.getJSON("https://jes.re/steam_resources.js", function parse_domains(data) {
+	$.getJSON("https://raw.githubusercontent.com/Jessecar96/Steam-Community-Suite/master/assets/domains.json", function parse_domains(data) {
 		safe_domains = data.safe_domains;
 		bad_domains = data.bad_domains;
 		ignore_domains = data.ignore_domains;
@@ -133,7 +133,7 @@ if(valve_test_site || bad_domains.indexOf(frag) != -1 || window.location.href.ma
 		if(window.location.href.match(r_valid_steam_url) !== null){
 
 			// External styles
-			$("body").append("<link rel=\"stylesheet\" type=\"text/css\" href=\"//jes.re/steam.css\" />");
+			$("body").append("<link rel=\"stylesheet\" type=\"text/css\" href=\"https://raw.githubusercontent.com/Jessecar96/Steam-Community-Suite/master/assets/steam.css\" />");
 
 			// Green bar
 			if(document.getElementById("global_header") != null)
