@@ -89,8 +89,8 @@ function main_script() {
 			$("head").append("<link href=\"https://rawgit.com/Jessecar96/Steam-Community-Suite/master/assets/steam.css\" rel=\"stylesheet\" type=\"text/css\" />");
 
 			// Green bar
-			if(document.getElementById("global_header") != null)
-				document.getElementById("global_header").style.borderBottom = "2px solid green";
+			if($("#global_header"))
+				$("#global_header").css("border-bottom","2px solid green");
 
 			if(window.location.href.match(/(\/id\/|\/profiles\/)/i) !== null){
 
@@ -109,36 +109,25 @@ function main_script() {
 				var summary = document.documentElement.outerHTML.match(/","summary":"(.+)"};/i)[1];
 				summary = JSON.parse("[\"" + summary + "\"]");
 				summary = summary[0];
-				if(document.getElementsByClassName("profile_summary").length > 0)
-					document.getElementsByClassName("profile_summary")[0].innerHTML = summary;
+				if($(".profile_summary").length > 0)
+					$(".profile_summary").html(summary);
 
 				// SteamIDs to profile
-				var ProfileSteamIDS = document.createElement("div");
-				ProfileSteamIDS.innerHTML = "<b>Community ID:</b> <a style='color:#898989;text-decoration:underline;' href='javascript:void(0);' onclick=\"SteamCommunitySuite.OpenURLCopy('"+UserSID.GetCommunityID()+"')\" >"+UserSID.GetCommunityID()+"</a><br/><b>Steam 2:</b> "+UserSID.GetSteam2()+"<br/><b>Steam 3:</b> "+UserSID.GetSteam3()+"<br/><br/>";
-				document.body.appendChild(ProfileSteamIDS);
-				var ProfileName = document.getElementsByClassName("header_real_name")[0];
-				if(ProfileName != undefined){
-					ProfileName.insertBefore(ProfileSteamIDS, ProfileName.firstChild);
-				}else{
-					var ProfileHeaderSummary = document.getElementsByClassName("profile_header_summary")[0];
-					var PrivateProfileInfo = document.getElementsByClassName("profile_private_info")[0];
-					ProfileHeaderSummary.insertBefore(ProfileSteamIDS, PrivateProfileInfo);
-				}
+				if($(".header_real_name").length > 0)
+					$(".header_real_name").prepend("<div class='profile-steamids'><b>Community ID:</b> <a style='color:#898989;text-decoration:underline;' href='javascript:void(0);' onclick=\"SteamCommunitySuite.OpenURLCopy('"+UserSID.GetCommunityID()+"')\" >"+UserSID.GetCommunityID()+"</a><br/><b>Steam 2:</b> "+UserSID.GetSteam2()+"<br/><b>Steam 3:</b> "+UserSID.GetSteam3()+"</div>")
 
 				// SteamRep
 				var SRBox =  '<div class="community-links"><div class="profile_recentgame_header profile_leftcol_header links-header"><h2>Community Links</h2><div class="links-container"></div></div></div>';
 					SRBox += '<div class="sr-status"><div class="profile_recentgame_header profile_leftcol_header links-header rep-header"><h2><a target="_blank" href="http://steamrep.com/profiles/'+SteamID64+'" >SteamRep Status</a></h2><div class="reputation-content"><img src="https://i.imgur.com/rSFZZgI.gif" alt="Loading"/> Loading Rep...</div></div></div>';
 
 				// Prepend boxes to profile
-				document.getElementsByClassName("profile_leftcol")[0].innerHTML = SRBox + document.getElementsByClassName("profile_leftcol")[0].innerHTML;
+				$(".profile_leftcol").prepend(SRBox);
 
 				// Community Links
-				var links_container = document.getElementsByClassName("links-container")[0];
-				links_container.style.fontSize = "14px";
-				links_container.innerHTML  = "";
-				links_container.innerHTML += "Backpack: <a target='_blank' href='http://tf2b.com/tf2/"+SteamID64+"'>TF2B</a> | <a target='_blank' href='http://backpack.tf/profiles/"+SteamID64+"'>backpack.tf</a> | <a target='_blank' href='http://tf2items.com/profiles/"+SteamID64+"'>TF2Items</a> | <a target='_blank' href='http://optf2.com/tf2/user/"+SteamID64+"'>OPTF2</a><br/>";
-				links_container.innerHTML += "Trading: <a target='_blank' href='http://bazaar.tf/profiles/"+SteamID64+"'>bazaar.tf</a> | <a target='_blank' href='http://www.tf2outpost.com/user/"+SteamID64+"'>TF2 Outpost</a> | <a target='_blank' href='http://scrap.tf/profile/"+SteamID64+"'>Scrap.TF</a> | <a target='_blank' href='http://dispenser.tf/id/"+SteamID64+"'>dispenser.tf</a><br/>";
-				links_container.innerHTML += "Misc: <a target='_blank' href='http://rep.tf/"+SteamID64+"'>Rep.TF</a> | <a target='_blank' href='http://tf2r.com/user/"+SteamID64+".html'>TF2R</a> | <a target='_blank' href='http://dota2lounge.com/profile?id="+SteamID64+"'>Dota 2 Lounge</a> | <a target='_blank' href='http://csgolounge.com/profile?id="+SteamID64+"'>CS:GO Lounge</a><br/>";
+				var links_container = $(".links-container");
+				links_container.append("Backpack: <a target='_blank' href='http://tf2b.com/tf2/"+SteamID64+"'>TF2B</a> | <a target='_blank' href='http://backpack.tf/profiles/"+SteamID64+"'>backpack.tf</a> | <a target='_blank' href='http://tf2items.com/profiles/"+SteamID64+"'>TF2Items</a> | <a target='_blank' href='http://optf2.com/tf2/user/"+SteamID64+"'>OPTF2</a><br/>");
+				links_container.append("Trading: <a target='_blank' href='http://bazaar.tf/profiles/"+SteamID64+"'>bazaar.tf</a> | <a target='_blank' href='http://www.tf2outpost.com/user/"+SteamID64+"'>TF2 Outpost</a> | <a target='_blank' href='http://scrap.tf/profile/"+SteamID64+"'>Scrap.TF</a> | <a target='_blank' href='http://dispenser.tf/id/"+SteamID64+"'>dispenser.tf</a><br/>");
+				links_container.append("Misc: <a target='_blank' href='http://rep.tf/"+SteamID64+"'>Rep.TF</a> | <a target='_blank' href='http://tf2r.com/user/"+SteamID64+".html'>TF2R</a> | <a target='_blank' href='http://dota2lounge.com/profile?id="+SteamID64+"'>Dota 2 Lounge</a> | <a target='_blank' href='http://csgolounge.com/profile?id="+SteamID64+"'>CS:GO Lounge</a><br/>");
 
 				// SteamRep
 				var srequest = new XMLHttpRequest();
@@ -193,12 +182,14 @@ function main_script() {
 					}
 					window.location = url;
 				}
+
 				function scs_never_ask(url) {
 					if(window.localStorage){
 						window.localStorage['neverAskAgain'] = true;
 					}
 					window.location = url;
 				}
+				
 				inject_script(scs_remember_site.toString(), false);
 				inject_script(scs_never_ask.toString(), false);
 

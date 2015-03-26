@@ -1,21 +1,27 @@
 .profile_content .has_profile_background {
 	margin-top: 0px;
 }
+
 .community-links{
 	margin-top:20px;
 	margin-bottom:8px;
 }
+
 .extra-notes-container{
 	margin-top:12px;
 	margin-bottom:12px;
 }
+
 .sr-status{
 	margin-top: 12px;
 	margin-bottom:12px;
 }
+
 .links-container{
 	line-height: 20px;
+	font-size: 14px;
 }
+
 .profile_header_bg_texture{
 	background-image: -ms-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%);
 	background-image: -moz-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%);
@@ -25,50 +31,64 @@
 	background-image: radial-gradient(circle farthest-corner at center top, #32405A 0%, #252934 100%);
 	box-shadow:0px 0px 10px 3px rgba(0,0,0,.8);
 }
+
 div.profile_page {
 	padding-top: 10px;
 }
+
 .profile_comment_area{
 	margin-bottom:40px;
 	margin-top: 10px;
 }
+
 .profile_header_bg{
 	background:none;
 	background-image:none;
 	min-height:240px;
 }
+
 .profile_header_bg_texture, .profile_summary, .profile_header_bg, .profile_header, .links-header, .header_real_name{
 	height:auto !important;
 }
+
 .profile_header_summary{
 	padding-bottom:10px;
 }
+
 .profile_header{
 	min-height:216px;
 }
+
 .profile_ban, .persona{
 	margin-top:12px;
 }
+
 .profile_ban_status{
 	color:red;
 	text-align:center;
 	font-size:16px;
 }
+
 .profile_ban{
 	font-size:18px;
 }
+
 .profile_summary_footer{
 	display: none;
 }
+
 .profile_background_holder_content{
 	background:transparent;
 }
+
 .profile_background_image_content {
 	background-image: none !important;
 } 
+
 .profile_background_overlay_content{
 	/* body bg color */
 }
+
 .profile_content.has_profile_background {
 	background:transparent;
 	margin-top: 0px;
@@ -79,5 +99,10 @@ div.profile_page {
 }
 
 body.v6 {
-	background: url('http://jes.re/steam-bg.jpg' ) center top repeat-y #000000;
+	background: url('https://raw.githubusercontent.com/Jessecar96/Steam-Community-Suite/master/assets/steam-bg.jpg' ) center top repeat-y #000000;
 }
+
+.profile-steamids{
+	margin-bottom: 8px;
+}
+
