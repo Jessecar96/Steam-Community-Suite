@@ -86,7 +86,7 @@ function main_script() {
 		if(window.location.href.match(r_valid_steam_url) !== null){
 
 			// External styles
-			$("head").append("<link href=\"https://rawgit.com/Jessecar96/Steam-Community-Suite/master/assets/steam.css\" rel=\"stylesheet\" type=\"text/css\" />");
+			$("head").append("<link href=\"" + chrome.extension.getURL("assets/steam.css") + "\" rel=\"stylesheet\" type=\"text/css\" />");
 
 			// Green bar
 			if($("#global_header"))
@@ -189,7 +189,7 @@ function main_script() {
 					}
 					window.location = url;
 				}
-				
+
 				inject_script(scs_remember_site.toString(), false);
 				inject_script(scs_never_ask.toString(), false);
 
@@ -330,7 +330,7 @@ if(!window.localStorage['scs-domains-time'] || !window.localStorage['scs-domains
 	safe_domains = data.safe_domains;
 	bad_domains = data.bad_domains;
 	ignore_domains = data.ignore_domains;
-	
+
 	inject_script("var safe_domains = " + JSON.stringify(safe_domains) + ";", false);
 	inject_script(update_domains.toString());
 	log("Loaded JSON from cache");

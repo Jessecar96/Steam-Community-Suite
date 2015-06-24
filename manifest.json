@@ -13,7 +13,7 @@
 		"512": "img/scs-logo-512.png"
 	},
 
-	"web_accessible_resources" : ["/js/script.js", "/js/jquery-2.1.1.min.js", "/js/SteamID.min.js", "https://jes.re/steam_resources.js"],
+	"web_accessible_resources" : ["/assets/steam.css", "/js/script.js", "/js/jquery-2.1.1.min.js", "/js/SteamID.min.js", "https://jes.re/steam_resources.js"],
 
 	"content_scripts":[
 		{

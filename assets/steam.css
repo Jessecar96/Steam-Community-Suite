@@ -23,12 +23,12 @@
 }
 
 .profile_header_bg_texture{
-	background-image: -ms-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%);
-	background-image: -moz-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%);
-	background-image: -o-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%);
-	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #32405A), color-stop(1, #252934));
-	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%);
-	background-image: radial-gradient(circle farthest-corner at center top, #32405A 0%, #252934 100%);
+	background-image: -ms-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
+	background-image: -moz-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #32405A), color-stop(1, #252934)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #32405A 0%, #252934 100%) !important;
 	box-shadow:0px 0px 10px 3px rgba(0,0,0,.8);
 }
 
