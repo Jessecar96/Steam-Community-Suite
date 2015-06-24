@@ -1,6 +1,10 @@
 # Steam-Community-Suite
 Enhancements to the steam community and preventing phishing
 
+## Install
+<a href="https://chrome.google.com/webstore/detail/nagidokihjafcmjcgpglhjahpojlkdca">Install from the Chrome Web Store</a><br/>
+<b>Note:</b> No longer available for Firefox. Opera version coming soon.
+
 ## Features
 - Info box now expands to fill all your profile info.
 - Info box now uses an actual css gradient instead of an image.
