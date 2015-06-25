@@ -117,17 +117,27 @@ function main_script() {
 					$(".header_real_name").prepend("<div class='profile-steamids'><b>Community ID:</b> <a style='color:#898989;text-decoration:underline;' href='javascript:void(0);' onclick=\"SteamCommunitySuite.OpenURLCopy('"+UserSID.GetCommunityID()+"')\" >"+UserSID.GetCommunityID()+"</a><br/><b>Steam 2:</b> "+UserSID.GetSteam2()+"<br/><b>Steam 3:</b> "+UserSID.GetSteam3()+"</div>")
 
 				// SteamRep
-				var SRBox =  '<div class="community-links"><div class="profile_recentgame_header profile_leftcol_header links-header"><h2>Community Links</h2><div class="links-container"></div></div></div>';
-					SRBox += '<div class="sr-status"><div class="profile_recentgame_header profile_leftcol_header links-header rep-header"><h2><a target="_blank" href="http://steamrep.com/profiles/'+SteamID64+'" >SteamRep Status</a></h2><div class="reputation-content"><img src="https://i.imgur.com/rSFZZgI.gif" alt="Loading"/> Loading Rep...</div></div></div>';
+				var linksbox = '<div class="community-links"></div>';
 
 				// Prepend boxes to profile
-				$(".profile_leftcol").prepend(SRBox);
+				$(".profile_in_game").after(linksbox);
 
 				// Community Links
-				var links_container = $(".links-container");
-				links_container.append("Backpack: <a target='_blank' href='http://tf2b.com/tf2/"+SteamID64+"'>TF2B</a> | <a target='_blank' href='http://backpack.tf/profiles/"+SteamID64+"'>backpack.tf</a> | <a target='_blank' href='http://tf2items.com/profiles/"+SteamID64+"'>TF2Items</a> | <a target='_blank' href='http://optf2.com/tf2/user/"+SteamID64+"'>OPTF2</a><br/>");
-				links_container.append("Trading: <a target='_blank' href='http://bazaar.tf/profiles/"+SteamID64+"'>bazaar.tf</a> | <a target='_blank' href='http://www.tf2outpost.com/user/"+SteamID64+"'>TF2 Outpost</a> | <a target='_blank' href='http://scrap.tf/profile/"+SteamID64+"'>Scrap.TF</a> | <a target='_blank' href='http://dispenser.tf/id/"+SteamID64+"'>dispenser.tf</a><br/>");
-				links_container.append("Misc: <a target='_blank' href='http://rep.tf/"+SteamID64+"'>Rep.TF</a> | <a target='_blank' href='http://tf2r.com/user/"+SteamID64+".html'>TF2R</a> | <a target='_blank' href='http://dota2lounge.com/profile?id="+SteamID64+"'>Dota 2 Lounge</a> | <a target='_blank' href='http://csgolounge.com/profile?id="+SteamID64+"'>CS:GO Lounge</a><br/>");
+				var links =  "<a target='_blank' href='http://tf2b.com/tf2/"+SteamID64+"'>TF2B</a> / <a target='_blank' href='http://tf2b.com/csgo/"+SteamID64+"'>CS:GO</a> / <a target='_blank' href='http://tf2b.com/d2/"+SteamID64+"'>D2</a><br/>";
+					links += "<a target='_blank' href='http://backpack.tf/profiles/"+SteamID64+"'>backpack.tf</a> / <a target='_blank' href='http://csgo.backpack.tf/profiles/"+SteamID64+"'>CS:GO</a> / <a target='_blank' href='http://dota2.backpack.tf/profiles/"+SteamID64+"'>D2</a><br/>";
+					links += "<a target='_blank' href='http://bazaar.tf/profiles/"+SteamID64+"'>bazaar.tf</a><br/>";
+					links += "<a target='_blank' href='http://www.tf2outpost.com/user/"+SteamID64+"'>TF2 Outpost</a><br/>";
+					links += "<a target='_blank' href='http://scrap.tf/profile/"+SteamID64+"'>Scrap.TF</a><br/>";
+					links += "<a target='_blank' href='http://dispenser.tf/id/"+SteamID64+"'>dispenser.tf</a><br/>";
+					links += "<a target='_blank' href='http://rep.tf/"+SteamID64+"'>Rep.TF</a><br/>";
+					links += "<a target='_blank' href='http://tf2r.com/user/"+SteamID64+".html'>TF2R</a><br/>";
+					links += "<a target='_blank' href='http://dota2lounge.com/profile?id="+SteamID64+"'>Dota 2 Lounge</a><br/>";
+					links += "<a target='_blank' href='http://csgolounge.com/profile?id="+SteamID64+"'>CS:GO Lounge</a><br/>";
+					links += "";
+					links += "";
+					links += "";
+
+				$(".community-links").html(links);
 
 				// SteamRep
 				var srequest = new XMLHttpRequest();
@@ -136,28 +146,29 @@ function main_script() {
 						var steamrep = JSON.parse(srequest.responseText);
 						steamrep = steamrep.steamrep;
 						var fullrep = (steamrep.reputation.full=="") ? "No special reputation." : steamrep.reputation.full;
-						document.getElementsByClassName("reputation-content")[0].innerHTML = fullrep;
+
+						$(".community-links").after("<div class='steamrep-box'>Loading...</div>");
+						var srbox = $(".steamrep-box");
+						srbox.text(fullrep);
 
 						if(steamrep.reputation.full.indexOf("SCAMMER") != -1){
-							document.getElementsByClassName("rep-header")[0].style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-							document.getElementsByClassName("rep-header")[0].style.border = "2px solid red";
-							document.getElementsByClassName("profile_header_bg_texture")[0].style.border = "2px solid red";
-							document.getElementsByClassName("profile_content")[0].style.border = "2px solid red";
-							document.getElementsByClassName("profile_content")[0].style.borderTop = "none";
+							srbox.addClass('sr-scammer');
+							$(".profile_header_bg_texture").css('border', "2px solid red");
+							$(".profile_content").css('border', "2px solid red");
+							$(".profile_content").css('border-top', "none");
 						}else if(steamrep.reputation.full.indexOf("CAUTION") != -1){
-							document.getElementsByClassName("rep-header")[0].style.backgroundColor = "rgba(201, 129, 0, 0.25)";
+							srbox.addClass('sr-caution');
 						}else if(steamrep.reputation.full.indexOf("ADMIN") != -1){
-							document.getElementsByClassName("rep-header")[0].style.backgroundColor = "rgba(0, 201, 40, 0.25)";
-							document.getElementsByClassName("rep-header")[0].style.border = "2px solid green";
-							document.getElementsByClassName("profile_header_bg_texture")[0].style.border = "2px solid green";
-							document.getElementsByClassName("profile_content")[0].style.border = "2px solid green";
-							document.getElementsByClassName("profile_content")[0].style.borderTop = "none";
+							srbox.addClass('sr-admin');
+							$(".profile_header_bg_texture").css('border', "2px solid green");
+							$(".profile_content").css('border', "2px solid green");
+							$(".profile_content").css('border-top', "none");
 						}else if(steamrep.reputation.full.indexOf("TRUSTED") != -1){
-							document.getElementsByClassName("rep-header")[0].style.backgroundColor = "rgba(0, 201, 177, 0.25)";
+							srbox.addClass('sr-trusted');;
 						}else if(steamrep.reputation.full.indexOf("MIDDLEMAN") != -1){
-							document.getElementsByClassName("rep-header")[0].style.backgroundColor = "rgba(0, 201, 177, 0.25)";
+							srbox.addClass('sr-middlman');
 						}else if(steamrep.reputation.full.indexOf("DONATOR") != -1){
-							document.getElementsByClassName("rep-header")[0].style.backgroundColor = "rgba(0, 105, 201, 0.25)";
+							srbox.addClass('sr-donator');
 						}
 					}
 				};

@@ -2,11 +2,6 @@
 	margin-top: 0px;
 }
 
-.community-links{
-	margin-top:20px;
-	margin-bottom:8px;
-}
-
 .extra-notes-container{
 	margin-top:12px;
 	margin-bottom:12px;
@@ -59,10 +54,6 @@ div.profile_page {
 	min-height:216px;
 }
 
-.profile_ban, .persona{
-	margin-top:12px;
-}
-
 .profile_ban_status{
 	color:red;
 	text-align:center;
@@ -83,7 +74,7 @@ div.profile_page {
 
 .profile_background_image_content {
 	background-image: none !important;
-} 
+}
 
 .profile_background_overlay_content{
 	/* body bg color */
@@ -102,7 +93,63 @@ body.v6 {
 	background: url('https://raw.githubusercontent.com/Jessecar96/Steam-Community-Suite/master/assets/steam-bg.jpg' ) center top repeat-y #000000;
 }
 
-.profile-steamids{
+.profile-steamids {
 	margin-bottom: 8px;
 }
 
+.profile_rightcol > div[style='font-size: 11px; font-family: Verdana; margin-bottom: 10px;'] {
+	display: none;
+}
+
+.profile_in_game {
+	margin-bottom: 18px;
+}
+
+.community-links {
+	background: rgba(20, 20, 20, 0.73);
+	padding: 10px;
+	margin: 0px -4px;
+	border-radius: 4px;
+	margin-bottom: 18px;
+}
+
+.community-links a:hover {
+	color: #66C0F4;
+}
+
+.steamrep-box {
+	color: white;
+	font-size: 17px;
+	padding: 8px;
+	padding-left: 12px;
+	margin: 0px -12px;
+	margin-bottom: 18px;
+	border-right: none !important;
+	line-height: 17px;
+}
+
+.steamrep-box.sr-scammer {
+	background: rgba(255, 0, 0, .25);
+	border: 2px solid red;
+}
+
+.steamrep-box.sr-admin {
+	background: rgba(0, 201, 40, 0.25);
+	border: 2px solid green;
+}
+
+.steamrep-box.sr-caution {
+	background: rgba(201, 129, 0, 0.25);
+}
+
+.steamrep-box.sr-trusted {
+	background: rgba(0, 201, 177, 0.25);
+}
+
+.steamrep-box.sr-middleman {
+	background: rgba(0, 201, 177, 0.25);
+}
+
+.steamrep-box.sr-donator {
+	background: rgba(0, 105, 201, 0.25);
+}
