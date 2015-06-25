@@ -18,13 +18,81 @@
 }
 
 .profile_header_bg_texture{
-	background-image: -ms-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
-	background-image: -moz-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
 	background-image: -o-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
 	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #32405A), color-stop(1, #252934)) !important;
 	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #32405A 0%, #252934 100%) !important;
 	background-image: radial-gradient(circle farthest-corner at center top, #32405A 0%, #252934 100%) !important;
 	box-shadow:0px 0px 10px 3px rgba(0,0,0,.8);
+}
+
+/* Enhanced steam custom profiles */
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/purple/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #52267D 0%, #401252 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #52267D), color-stop(1, #401252)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #52267D 0%, #401252 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #52267D 0%, #401252 100%) !important;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/blue/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #25579A 0%, #182F61 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #25579A), color-stop(1, #182F61)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #25579A 0%, #182F61 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #25579A 0%, #182F61 100%) !important;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/green/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #1A613D 0%, #11461C 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #1A613D), color-stop(1, #11461C)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #1A613D 0%, #11461C 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #1A613D 0%, #11461C 100%) !important;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/orange/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #8F4A18 0%, #7D3309 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #8F4A18), color-stop(1, #7D3309)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #8F4A18 0%, #7D3309 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #8F4A18 0%, #7D3309 100%) !important;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/pink/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #CA558B 0%, #B32A58 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #CA558B), color-stop(1, #B32A58)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #CA558B 0%, #B32A58 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #CA558B 0%, #B32A58 100%) !important;
+}
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/pink/header.jpg);'] > .profile_header > .profile_header_content {
+	color: #FFF;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/purple/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #502577 0%, #411353 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #502577), color-stop(1, #411353)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #502577 0%, #411353 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #502577 0%, #411353 100%) !important;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/red/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #4E2337 0%, #40131A 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #4E2337), color-stop(1, #40131A)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #4E2337 0%, #40131A 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #4E2337 0%, #40131A 100%) !important;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/teal/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #1A787A 0%, #115351 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #1A787A), color-stop(1, #115351)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #1A787A 0%, #115351 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #1A787A 0%, #115351 100%) !important;
+}
+
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/yellow/header.jpg);'] {
+	background-image: -o-radial-gradient(center top, circle farthest-corner, #6D7C22 0%, #666E1B 100%) !important;
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #6D7C22), color-stop(1, #666E1B)) !important;
+	background-image: -webkit-radial-gradient(center top, circle farthest-corner, #6D7C22 0%, #666E1B 100%) !important;
+	background-image: radial-gradient(circle farthest-corner at center top, #6D7C22 0%, #666E1B 100%) !important;
+}
+div[style='background-image: url(chrome-extension://okadibdjfemgnhjiembecghcbfknbfhg/img/profile_styles/yellow/header.jpg);'] > .profile_header > .profile_header_content {
+	color: #FFF;
 }
 
 div.profile_page {
