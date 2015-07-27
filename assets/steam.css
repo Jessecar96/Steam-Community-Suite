@@ -221,3 +221,7 @@ body.v6 {
 .steamrep-box.sr-donator {
 	background: rgba(0, 105, 201, 0.25);
 }
+
+.header_real_name_spacer {
+	height: 74px;
+}
