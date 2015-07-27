@@ -129,6 +129,7 @@ function main_script() {
 					links += "<a target='_blank' href='http://www.tf2outpost.com/user/"+SteamID64+"'>TF2 Outpost</a><br/>";
 					links += "<a target='_blank' href='http://scrap.tf/profile/"+SteamID64+"'>Scrap.TF</a><br/>";
 					links += "<a target='_blank' href='http://dispenser.tf/id/"+SteamID64+"'>dispenser.tf</a><br/>";
+					links += "<a target='_blank' href='http://steamrep.com/profiles/"+SteamID64+"'>SteamRep</a><br/>";
 					links += "<a target='_blank' href='http://rep.tf/"+SteamID64+"'>Rep.TF</a><br/>";
 					links += "<a target='_blank' href='http://tf2r.com/user/"+SteamID64+".html'>TF2R</a><br/>";
 					links += "<a target='_blank' href='http://dota2lounge.com/profile?id="+SteamID64+"'>Dota 2 Lounge</a><br/>";
