@@ -112,12 +112,8 @@ function main_script() {
 				if($(".profile_summary").length > 0)
 					$(".profile_summary").html(summary);
 
-				// SteamIDs to profile
-				if($(".header_real_name").length > 0)
-					$(".header_real_name").prepend("<div class='profile-steamids'><b>Community ID:</b> <a style='color:#898989;text-decoration:underline;' href='javascript:void(0);' onclick=\"SteamCommunitySuite.OpenURLCopy('"+UserSID.GetCommunityID()+"')\" >"+UserSID.GetCommunityID()+"</a><br/><b>Steam 2:</b> "+UserSID.GetSteam2()+"<br/><b>Steam 3:</b> "+UserSID.GetSteam3()+"</div>")
-
 				// SteamRep
-				var linksbox = '<div class="community-links"></div>';
+				var linksbox = '<div class="steamids-sidebar"></div><div class="community-links"></div>';
 
 				// Prepend boxes to profile
 				$(".profile_in_game").after(linksbox);
@@ -134,11 +130,10 @@ function main_script() {
 					links += "<a target='_blank' href='http://tf2r.com/user/"+SteamID64+".html'>TF2R</a><br/>";
 					links += "<a target='_blank' href='http://dota2lounge.com/profile?id="+SteamID64+"'>Dota 2 Lounge</a><br/>";
 					links += "<a target='_blank' href='http://csgolounge.com/profile?id="+SteamID64+"'>CS:GO Lounge</a><br/>";
-					links += "";
-					links += "";
-					links += "";
 
 				$(".community-links").html(links);
+
+				$(".steamids-sidebar").html("<b>Community ID:</b> <a style='color:#898989;text-decoration:underline;' href='javascript:void(0);' onclick=\"open_url_copy('"+UserSID.GetCommunityID()+"')\" >"+UserSID.GetCommunityID()+"</a><br/><b>Steam 2:</b> "+UserSID.GetSteam2()+"<br/><b>Steam 3:</b> "+UserSID.GetSteam3());
 
 				// SteamRep
 				var srequest = new XMLHttpRequest();

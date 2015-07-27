@@ -2,11 +2,6 @@
 	padding-top: 14px;
 }
 
-.extra-notes-container{
-	margin-top:12px;
-	margin-bottom:12px;
-}
-
 .sr-status{
 	margin-top: 12px;
 	margin-bottom:12px;
@@ -108,6 +103,7 @@ div.profile_page {
 	background:none;
 	background-image:none;
 	min-height:240px;
+	padding-bottom: 0px;
 }
 
 .profile_header_bg_texture, .profile_summary, .profile_header_bg, .profile_header, .links-header, .header_real_name{
@@ -173,12 +169,16 @@ body.v6 {
 	margin-bottom: 18px;
 }
 
-.community-links {
+.community-links, .steamids-sidebar {
 	background: rgba(20, 20, 20, 0.73);
 	padding: 10px;
 	margin: 0px -4px;
 	border-radius: 4px;
 	margin-bottom: 18px;
+}
+
+.steamids-sidebar {
+	margin-bottom: 10px;
 }
 
 .community-links a:hover {
@@ -220,8 +220,4 @@ body.v6 {
 
 .steamrep-box.sr-donator {
 	background: rgba(0, 105, 201, 0.25);
-}
-
-.header_real_name_spacer {
-	height: 74px;
 }
