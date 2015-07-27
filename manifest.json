@@ -4,7 +4,7 @@
 	"name": "Steam Community Suite",
 	"description": "Fixing the Steam Community and stopping phishing.",
 	"author": "Jessecar",
-	"version": "1.0",
+	"version": "1.1",
 	"icons": {
 		"16": "img/scs-logo-16.png",
 		"32": "img/scs-logo-32.png",
