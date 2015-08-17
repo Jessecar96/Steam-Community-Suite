@@ -2,8 +2,9 @@
 Enhancements to the Steam Community and preventing phishing
 
 ## Install
-<a href="https://chrome.google.com/webstore/detail/gicnbiillhmpffbemfhmhnelldbnjblb">Install from the Chrome Web Store</a><br/>
-<b>Note:</b> No longer available for Firefox. Opera version coming soon.
+Chrome: <a href="https://chrome.google.com/webstore/detail/gicnbiillhmpffbemfhmhnelldbnjblb">Install from the Chrome Web Store</a><br/>
+Opera: Download the crx file from <a href="https://github.com/Jessecar96/Steam-Community-Suite/releases">the releases page</a> and install it manually.<br/>
+<b>Not available for Firefox</b>
 
 ## Features
 - Profile info box now expands to fill all your profile info.
