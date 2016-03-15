@@ -130,6 +130,7 @@ function main_script() {
 					links += "<a target='_blank' href='http://tf2r.com/user/"+SteamID64+".html'>TF2R</a><br/>";
 					links += "<a target='_blank' href='http://dota2lounge.com/profile?id="+SteamID64+"'>Dota 2 Lounge</a><br/>";
 					links += "<a target='_blank' href='http://csgolounge.com/profile?id="+SteamID64+"'>CS:GO Lounge</a><br/>";
+					links += "<a target='_blank' href='http://steamladder.com/profile/"+SteamID64+"'>Steam Ladder</a><br/>";
 
 				$(".community-links").html(links);
 
