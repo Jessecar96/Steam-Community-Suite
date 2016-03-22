@@ -91,5 +91,6 @@
 ], "ignore_domains": [
 	"dispenser.tf",
 	"steamrep.com",
-	"sourceop.com"
+	"sourceop.com",
+	"forums.sourceop.com"
 ]}
