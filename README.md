@@ -1,7 +1,6 @@
 # [Steam Security Suite]
 Preventing phishing in the Steam Community
 
-![Example phishing page](example.png)
+[Install on Chrome](https://chrome.google.com/webstore/detail/steam-community-suite/gicnbiillhmpffbemfhmhnelldbnjblb) or [Install on Firefox](https://addons.mozilla.org/en-US/firefox/addon/steam-security-suite/)
 
-## Install
-Coming soon
+![Example phishing page](example.png)
