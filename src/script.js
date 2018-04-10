@@ -17,7 +17,7 @@ if (globalHeader) {
 // Look for links to Steam's CDN in link tags
 let stylesheets = document.getElementsByTagName("link");
 for (let i in stylesheets) {
-  if (stylesheets[i].href && stylesheets[i].href.match(/steamcommunity-a\.akamaihd\.net\/public\/css/gi)) {
+  if (stylesheets[i].href && stylesheets[i].href.match(/(?:steamcommunity-a\.akamaihd\.net|store\.akamai\.steamstatic\.com)\/public(?:\/shared)?\/css/gi)) {
     console.log("[SCS2] Found Steam's css CDN");
     steamPageMatches++;
   }
@@ -26,15 +26,15 @@ for (let i in stylesheets) {
 // Look for links to Steam's CDN in script tags
 let scripts = document.getElementsByTagName("script");
 for (let i in scripts) {
-  if (scripts[i].src && scripts[i].src.match(/steamcommunity-a\.akamaihd\.net\/public\/javascript/gi)) {
+  if (scripts[i].src && scripts[i].src.match(/(?:steamcommunity-a\.akamaihd\.net|store\.akamai\.steamstatic\.com)\/public(?:\/shared)?\/javascript/gi)) {
     console.log("[SCS2] Found Steam's javascript CDN");
     steamPageMatches++;
   }
 }
 
 // Look for text in #footerText
-let footerText = document.getElementById("footerText");
-if (footerText && footerText.innerText.match(/© Valve Corporation\. All rights reserved\./gi)) {
+let footerText = document.getElementById("footerText") || document.getElementById("footer_text");
+if (footerText && footerText.innerText.match(/©(?: 20[0-9][0-9])? Valve Corporation\. All rights reserved\./gi)) {
   console.log("[SCS2] Found Steam's footer text");
   steamPageMatches++;
 }
