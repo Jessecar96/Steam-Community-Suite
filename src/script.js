@@ -51,7 +51,7 @@ if (steamPageMatches >= 2) {
 
   console.log("[SCS2] Steam page matches: " + steamPageMatches);
 
-  if (window.location.href.match(/(?:http|https):\/\/(?:store.|support.|forums.|api.|media.|www.|staging.|)(?:steamcommunity|steampowered|dota2|steamgames|valvesoftware)\.com/gi)) {
+  if (window.location.href.match(/(?:http|https):\/\/(?:(?:store\.|support\.|forums\.|api\.|media\.|www\.|staging\.|)(?:steamcommunity|steampowered|dota2|steamgames|valvesoftware)\.com|steam\.tv)/gi)) {
     // Confirmed steam URL
     document.getElementById("global_header").style.borderBottom = "1px solid lightgreen";
   } else {
